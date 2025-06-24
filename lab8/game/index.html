@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Карткова Гра</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <section class="settings">
+    <h3>Налаштування гри</h3>
+
+    <label>
+      Рядки:
+      <input type="number" id="rows" min="4" max="8" value="4" />
+    </label>
+
+    <label>
+      Стовпці:
+      <input type="number" id="cols" min="4" max="8" value="4" />
+    </label>
+
+    <label>
+      Складність:
+      <select id="difficulty">
+        <option value="easy" selected>Легка (3 хв)</option>
+        <option value="normal">Середня (2 хв)</option>
+        <option value="hard">Важка (1 хв)</option>
+      </select>
+    </label>
+
+    <label>
+      Ім’я гравця 1:
+      <input type="text" id="player1Name" placeholder="Гравець 1" value="Гравець 1" />
+    </label>
+
+    <label id="labelPlayer2" style="display: none;">
+      Ім’я гравця 2:
+      <input type="text" id="player2Name" placeholder="Гравець 2" value="Гравець 2" />
+    </label>
+
+    <label>
+      Кількість раундів:
+      <input type="number" id="rounds" value="1" min="1" />
+    </label>
+
+    <label>
+      Кількість гравців:
+      <select id="playerCount">
+        <option value="1">1 гравець</option>
+        <option value="2">2 гравці</option>
+      </select>
+    </label>
+
+    <button id="startButton">Розпочати гру</button>
+    <button id="resetSettingsBtn">Скинути налаштування</button>
+  </section>
+
+  <main class="wrapper">
+    <div class="game-section" id="gameBoard"></div>
+    <button id="restartBtn">Рестарт</button>
+  </main>
+
+  <aside class="panel">
+    <div class="player1">
+      <p id="playerName1">Гравець 1</p>
+      <div class="status-bar">
+        <span id="timerPlayer1">60 сек</span>
+        <span>Ходи: <span id="movesPlayer1">0</span></span>
+        <span>Збіги: <span id="matchesPlayer1">0</span></span>
+      </div>
+    </div>
+
+    <div class="player2" id="player2Panel" style="display: none;">
+      <p id="playerName2">Гравець 2</p>
+      <div class="status-bar">
+        <span id="timerPlayer2">60 сек</span>
+        <span>Ходи: <span id="movesPlayer2">0</span></span>
+        <span>Збіги: <span id="matchesPlayer2">0</span></span>
+      </div>
+    </div>
+  </aside>
+
+  <script src="script.js"></script>
+</body>
+</html>

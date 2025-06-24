@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <div class="slider" id="slider">
+        <div class="slider-content">
+          <div class="slide"><img width="600" src="../game/images/img_0.png" alt="Image 1"></div>
+          <div class="slide"><img width="600" src="../game/images/img_1.png" alt="Image 2"></div>
+          <div class="slide"><img width="600" src="../game/images/img_2.png" alt="Image 3"></div>
+        </div>
+        <div class="slider-controls">
+          <button class="slider-arrow prev" id="prev">&#8592;</button>
+          <button class="slider-arrow next" id="next">&#8594;</button>
+        </div>
+        <div class="slider-pagination" id="pagination"></div>
+    </div>
+
+    <div class="kanban-board">
+        <div class="column" id="to-do">
+          <h2>To Do</h2>
+          <div class="task" draggable="true" id="task-1">Завдання 1</div>
+          <div class="task" draggable="true" id="task-2">Завдання 2</div>
+        </div>
+        <div class="column" id="in-progress">
+          <h2>In Progress</h2>
+          <div class="task" draggable="true" id="task-3">Завдання 3</div>
+        </div>
+        <div class="column" id="done">
+          <h2>Done</h2>
+          <div class="task" draggable="true" id="task-4">Завдання 4</div>
+        </div>
+    </div>
+      
+    <!-- <script src="./script.js"></script> -->
+    <script src="./kanban.js"></script>
+
+</body>
+</html>

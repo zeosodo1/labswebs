@@ -1,0 +1,106 @@
+.slider {
+    position: relative;
+    width: 600px;
+    overflow: hidden;
+    height: 500px;
+  }
+  .slider-content {
+    display: flex;
+    transition: transform 0.5s ease;
+  }
+  .slide {
+    min-width: 100%;
+    box-sizing: border-box;
+  }
+  .slider-arrow {
+    position: absolute;
+    top: 50%;
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 10;
+  }
+  .prev { left: 10px; }
+  .next { right: 10px; }
+  .slider-pagination {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+  }
+  .slider-pagination div {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #ccc;
+    margin: 0 5px;
+    cursor: pointer;
+  }
+  .slider-pagination .active {
+    background-color: #333;
+  }
+
+
+
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+  
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+    padding: 20px;
+  }
+  
+  .kanban-board {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .column {
+    width: 30%;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+    min-height: 300px;
+    overflow-y: auto;
+  }
+  
+  .column h2 {
+    text-align: center;
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+  
+  .task {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 5px;
+    cursor: grab;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .task:active {
+    cursor: grabbing;
+  }
+  
+  .column:hover {
+    border-color: #5fa35f;
+  }
+  
+  .column.drag-over {
+    background-color: #e0e0e0;
+  }
+  
+  .task.dragging {
+    opacity: 0.5;
+  }
+  
